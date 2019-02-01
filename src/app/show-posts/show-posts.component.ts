@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService } from '../post.service';
+import { Post } from '../postDetail';
 
 @Component({
   selector: 'app-show-posts',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowPostsComponent implements OnInit {
 
-  constructor() { }
+  posts = [];
+
+  constructor( private postService: PostService) { }
 
   ngOnInit() {
+    this.postService.getPost().
+    subscribe(
+      (data: Post[]) => {
+      this.posts = data;
+      console.log("Prva proba", this.posts)
+      }
+    )
   }
 
 }
