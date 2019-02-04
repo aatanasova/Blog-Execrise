@@ -31,8 +31,18 @@ export class ShowPostsComponent implements OnInit {
     console.log(id)
     this.postService.deletePost(id).subscribe( (data) => {
       alert("Success deleted post")
-  });
-}
+    });
+  }
+
+  confirmDelete(id) {
+    var x = confirm("Are you sure you want to delete?");
+      if (x) {
+        return this.deletePost(id);
+      } else {
+        return false;
+      }
+    }
+  }
 
 
 
