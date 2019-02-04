@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { PostService } from '../post.service';
 import { Post } from '../postDetail';
+import {MatDialog, MAT_DIALOG_DATA} from '@angular/material';
+
+
 
 @Component({
   selector: 'app-show-posts',
@@ -11,7 +15,7 @@ export class ShowPostsComponent implements OnInit {
 
   posts = [];
 
-  constructor( private postService: PostService) { }
+  constructor( private postService: PostService, public dialog: MatDialog) { }
 
   ngOnInit() {
     this.postService.getPost().
@@ -22,5 +26,15 @@ export class ShowPostsComponent implements OnInit {
       }
     )
   }
+
+  deletePost(id) {
+    console.log(id)
+    this.postService.deletePost(id).subscribe( (data) => {
+      alert("Success deleted post")
+  });
+}
+
+
+
 
 }

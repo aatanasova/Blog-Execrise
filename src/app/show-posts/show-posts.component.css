@@ -8,11 +8,14 @@
     background-size: cover;
 }
 
-mat-grid-tile {
-    /* width: 80%;
-    margin: 0;
-    overflow: hidden; */
-    
+button {
+    width: 100px;
+    text-align: center;
+    margin:0 auto;
+}
+
+mat-card-actions {
+    text-align: center;
 }
 
 mat-card-title {
