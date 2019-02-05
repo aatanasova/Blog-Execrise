@@ -3,6 +3,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { PostService } from '../post.service';
 import { Post } from '../postDetail';
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material';
+import { PostInfoDialogComponent } from '../post-info-dialog/post-info-dialog.component';
+
 
 
 
@@ -27,24 +29,17 @@ export class ShowPostsComponent implements OnInit {
     )
   }
 
-  deletePost(id) {
-    console.log(id)
-    this.postService.deletePost(id).subscribe( (data) => {
-      alert("Success deleted post")
+  openDialog(): void {
+    const dialogRef = this.dialog.open(PostInfoDialogComponent, {
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
     });
   }
-
-  confirmDelete(id) {
-    var x = confirm("Are you sure you want to delete?");
-      if (x) {
-        return this.deletePost(id);
-      } else {
-        return false;
-      }
-    }
-  }
-
-
-
-
 }
+
+
+
+
+

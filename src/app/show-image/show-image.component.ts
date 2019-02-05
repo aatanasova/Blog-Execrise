@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ImageService } from '../image.service';
+import { Image } from '../imageDetail';
+import {MatPaginatorModule} from '@angular/material/paginator'; 
 
 @Component({
   selector: 'app-show-image',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowImageComponent implements OnInit {
 
-  constructor() { }
+  images = [];
+
+  constructor(private imageService: ImageService) { }
 
   ngOnInit() {
+    this.imageService.getImage().
+    subscribe (
+      (data: Image[]) => {
+        this.images=data;
+        console.log('Proba', this.images)
+      }
+    )
   }
 
 }

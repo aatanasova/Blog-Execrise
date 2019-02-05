@@ -8,12 +8,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog'; 
-
+import {MatPaginatorModule} from '@angular/material/paginator'; 
 
 import { AppComponent } from './app.component';
 import { ShowPostsComponent } from './show-posts/show-posts.component';
 import { ShowImageComponent } from './show-image/show-image.component';
 import { ChallengeComponent } from './challenge/challenge.component';
+import { PostInfoDialogComponent } from './post-info-dialog/post-info-dialog.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ChallengeComponent } from './challenge/challenge.component';
     ShowPostsComponent,
     ShowImageComponent,
     ChallengeComponent,
+    PostInfoDialogComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -33,7 +35,9 @@ import { ChallengeComponent } from './challenge/challenge.component';
     MatGridListModule,
     MatButtonModule,
     MatDialogModule,
+    MatPaginatorModule,
   ],
+  entryComponents:[ PostInfoDialogComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })
