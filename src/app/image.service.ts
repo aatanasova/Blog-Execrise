@@ -13,4 +13,10 @@ export class ImageService {
   getImage(): Observable<Image[]>{
     return this.http.get<Image[]>('https://jsonplaceholder.typicode.com/photos')
   }
+
+  deleteImage(id: number){
+    const url = `${'http://jsonplaceholder.typicode.com/photos/'}/${id}`;
+    return this.http.delete(url)
+  }
+
 }
