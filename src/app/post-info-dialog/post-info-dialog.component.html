@@ -1,3 +1,23 @@
-<p>
-  post-info-dialog works!
-</p>
+
+<h2 mat-dialog-title><span class="ion ion-md-create icon"></span>Edit post</h2>
+
+<mat-dialog-content>
+    <div class="example-container">
+        <mat-form-field>
+          <mat-label rows="4">Title</mat-label>
+          <textarea matInput type="text" [(ngModel)]="postObj.title" required>{{postObj.title}}</textarea>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Body</mat-label>
+          <textarea rows="8" matInput type="text" [(ngModel)]="postObj.body" required>{{postObj.body}}</textarea>
+        </mat-form-field>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button color="basic"(click)="close()">Close</button>
+    <button mat-raised-button color="primary"(click)="update()">Update</button>
+</mat-dialog-actions>
+
+

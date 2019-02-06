@@ -10,7 +10,8 @@
               </p>
             </mat-card-content>
             <mat-card-actions>
-              <button mat-raised-button color="warn" (click)="openDialog()">More</button>
+              <button mat-raised-button color="primary" (click)="openDialog(post)">Edit</button>
+              <button mat-raised-button color="warn" (click)="confirmDelete(post.id)">Delete</button>
             </mat-card-actions>
           </mat-card>
     </mat-grid-tile>
