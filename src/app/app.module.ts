@@ -19,6 +19,7 @@ import { ShowPostsComponent } from './show-posts/show-posts.component';
 import { ShowImageComponent } from './show-image/show-image.component';
 import { ChallengeComponent } from './challenge/challenge.component';
 import { PostInfoDialogComponent } from './post-info-dialog/post-info-dialog.component';
+import { ImageInfoDialogComponent } from './image-info-dialog/image-info-dialog.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { PostInfoDialogComponent } from './post-info-dialog/post-info-dialog.com
     ShowImageComponent,
     ChallengeComponent,
     PostInfoDialogComponent,
+    ImageInfoDialogComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -45,7 +47,7 @@ import { PostInfoDialogComponent } from './post-info-dialog/post-info-dialog.com
     MatInputModule,
     MatIconModule,
   ],
-  entryComponents:[ PostInfoDialogComponent ],
+  entryComponents:[ PostInfoDialogComponent, ImageInfoDialogComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })

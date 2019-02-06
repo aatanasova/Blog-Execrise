@@ -19,4 +19,9 @@ export class ImageService {
     return this.http.delete(url)
   }
 
+  updateImage(image: any){
+    const url = `${'http://jsonplaceholder.typicode.com/photos/'}/${image.id}`;
+    return this.http.put(url, image)
+  }
+
 }

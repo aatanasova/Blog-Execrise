@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject, Input } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialog, MatDialogRef,MAT_DIALOG_DATA } from '@angular/material';
-import {MatInputModule} from '@angular/material/input'; 
+import { MatInputModule } from '@angular/material/input'; 
 import { Post } from '../postDetail';
 import { PostService } from '../post.service';
 
@@ -21,11 +21,6 @@ export class PostInfoDialogComponent implements OnInit {
     this.postObj = this.data.post;
     // console.log(this.postObj)
   }
-
-  save() {
-    this.dialogRef.close('It was saved')
-  }
-
 
   close() {
     this.dialogRef.close();

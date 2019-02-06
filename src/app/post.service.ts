@@ -21,10 +21,10 @@ export class PostService {
     return this.http.delete(url)
   }
 
-  updatePost (post: any){
-    const url = `${'http://jsonplaceholder.typicode.com/photos/'}/${post.id}`;
+  updatePost(post: any){
+    const url = `${'http://jsonplaceholder.typicode.com/posts/'}/${post.id}`;
     return this.http.put(url, post)
-}
+  }
 
 
   

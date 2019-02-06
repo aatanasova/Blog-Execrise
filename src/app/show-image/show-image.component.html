@@ -10,7 +10,7 @@
             <img mat-card-image class="thumbnail" src={{image.thumbnailUrl}} alt="thumbnail Photo">
           </mat-card-content>
           <mat-card-actions>
-            <button mat-raised-button color="primary">Edit</button>
+            <button mat-raised-button color="primary" (click)="openDialog(image)">Edit</button>
             <button mat-raised-button color="warn" (click)="deleteImage(image.id)">Delete</button>
           </mat-card-actions>
         </mat-card>
