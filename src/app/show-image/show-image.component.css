@@ -3,10 +3,10 @@
   min-height: 300px;
 } 
 
-.example-header-image {
+/* .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
-}
+} */
 
 button {
   width: 100px;
@@ -14,23 +14,34 @@ button {
   margin:0 auto;
 }
 
+img {
+  width: 150px;
+  height: 150px;
+  padding: 20px 80px;
+}
+
 mat-card-actions {
   text-align: center;
 }
 
-img { display:block; }  
+mat-card {
+  background-color: #efefef;
+}
 
-/* mat-card-title {
+
+/* img { display:block; }   */
+
+mat-card-title {
   font-weight: 50;
   text-transform: uppercase;
   margin: 0;
   text-align: center;
   margin-bottom: 20px;
   color:#7e7a7a;
-  font-size:100%;
+  font-size:80%;
   word-spacing: 4px;
   letter-spacing: 1px;
-} */
+}
 
 p {
   font-size: 90%;

@@ -21,10 +21,6 @@ export class PostService {
     return this.http.delete(url)
   }
 
-  // updatePost (post: Post) : Observable<Post>{
-  //   return this.http.put<Post>('https://jsonplaceholder.typicode.com/posts', post)
-  // }
-
   updatePost (post: any){
     const url = `${'http://jsonplaceholder.typicode.com/photos/'}/${post.id}`;
     return this.http.put(url, post)
