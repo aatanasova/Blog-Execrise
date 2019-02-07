@@ -41,8 +41,17 @@ mat-form-field {
 
 }
 
+
 .sort-button {
-    float: left;
+    float: right;
+    width: 10%;
+    
+}
+
+div {
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 20px;
 }
 
 

@@ -14,6 +14,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon'; 
 import { MatSelectModule } from '@angular/material/select';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+
 
 import { AppComponent } from './app.component';
 import { ShowPostsComponent } from './show-posts/show-posts.component';
@@ -21,6 +26,7 @@ import { ShowImageComponent } from './show-image/show-image.component';
 import { ChallengeComponent } from './challenge/challenge.component';
 import { PostInfoDialogComponent } from './post-info-dialog/post-info-dialog.component';
 import { ImageInfoDialogComponent } from './image-info-dialog/image-info-dialog.component';
+
 
 
 @NgModule({
@@ -47,7 +53,11 @@ import { ImageInfoDialogComponent } from './image-info-dialog/image-info-dialog.
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    FlexLayoutModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule
   ],
   entryComponents:[ PostInfoDialogComponent, ImageInfoDialogComponent ],
   providers: [],
