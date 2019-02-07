@@ -24,4 +24,8 @@ export class ImageService {
     return this.http.put(url, image)
   }
 
+  addImage(image: any) {
+    return this.http.post('http://jsonplaceholder.typicode.com/photos/', image)
+  }
+
 }

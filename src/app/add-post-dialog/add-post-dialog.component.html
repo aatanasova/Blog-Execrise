@@ -1,0 +1,20 @@
+<h2 mat-dialog-title><span class="ion ion-md-add icon"></span>Add post</h2>
+
+<mat-dialog-content>
+    <div class="example-container">
+        <mat-form-field>
+          <mat-label rows="4">Title</mat-label>
+          <textarea matInput type="text" [(ngModel)]="title" required></textarea>
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Body</mat-label>
+          <textarea rows="8" matInput type="text" [(ngModel)]="body" required></textarea>
+        </mat-form-field>
+    </div>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-raised-button color="basic"(click)="close()">Close</button>
+    <button mat-raised-button color="primary" (click)="addPost()">Add</button>
+</mat-dialog-actions>

@@ -21,16 +21,48 @@
               </a>
             </li>
             <li>
-              <a routerLink="/show-posts">
+              <!-- <a routerLink="/show-posts">
                 <mat-icon class="icon">list</mat-icon>
                 <span class="label">Posts</span>
-              </a>
+              </a> -->
+              <button mat-button [matMenuTriggerFor]="postMenu">
+                  <mat-icon>list</mat-icon>
+                  <span>Posts</span>
+              </button>
+              <mat-menu #postMenu="matMenu">
+                <a routerLink="/show-posts">
+                  <button mat-menu-item>
+                    <mat-icon>list</mat-icon>
+                    <span>List posts</span>
+                  </button>
+                </a>
+                <button mat-menu-item (click)="openPostDialog()">
+                    <mat-icon>add</mat-icon>
+                    <span>Add post</span>
+                </button>
+              </mat-menu>
             </li>
             <li>
-              <a routerLink="/show-image">
+              <!-- <a routerLink="/show-image">
                 <mat-icon class="icon">list</mat-icon>
                 <span class="label">Images</span>
-              </a>
+              </a> -->
+              <button mat-button [matMenuTriggerFor]="imageMenu">
+                <mat-icon>list</mat-icon>
+                <span>Images</span>
+              </button>
+              <mat-menu #imageMenu="matMenu">
+                <a routerLink="/show-image">
+                  <button mat-menu-item>
+                      <mat-icon>list</mat-icon>
+                      <span>List images</span>
+                  </button>
+                </a>
+                <button mat-menu-item (click)="openImageDialog()">
+                  <mat-icon>add</mat-icon>
+                  <span>Add image</span>
+                </button>
+              </mat-menu>
             </li>
           </ul>
       </div>

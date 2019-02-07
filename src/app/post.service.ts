@@ -26,6 +26,10 @@ export class PostService {
     return this.http.put(url, post)
   }
 
+  addPost(post: any) {
+    return this.http.post('http://jsonplaceholder.typicode.com/posts/', post)
+  }
+
 
   
 }
