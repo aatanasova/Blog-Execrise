@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSelectModule} from '@angular/material/select';
 import { PostService } from '../post.service';
 import { Post } from '../postDetail';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
 import { PostInfoDialogComponent } from '../post-info-dialog/post-info-dialog.component';
-
 
 
 
@@ -16,6 +16,7 @@ import { PostInfoDialogComponent } from '../post-info-dialog/post-info-dialog.co
 export class ShowPostsComponent implements OnInit {
 
   posts = [];
+  titles = [];
 
   constructor( private postService: PostService, public dialog: MatDialog) { }
 
@@ -27,6 +28,15 @@ export class ShowPostsComponent implements OnInit {
       // console.log("Prva proba", this.posts)
       }
     )
+  }
+
+  sortTitle() {
+    this.posts.sort( function(a, b) {
+      var titleLengthA = a.title.length;
+      var titleLengthB = b.title.length;
+      return titleLengthB - titleLengthA;
+    });
+    console.log('naslovi',this.posts)
   }
 
   openDialog(post: any): void {

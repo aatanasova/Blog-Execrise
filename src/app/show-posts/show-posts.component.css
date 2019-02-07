@@ -35,5 +35,14 @@ p {
     line-height: 195%;
 }
 
+mat-form-field {
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.sort-button {
+    float: left;
+}
 
 

@@ -9,7 +9,7 @@
 } */
 
 button {
-  width: 100px;
+  width: 80px;
   text-align: center;
   margin:0 auto;
 }
@@ -23,11 +23,6 @@ img {
 mat-card-actions {
   text-align: center;
 }
-
-mat-card {
-  background-color: #efefef;
-}
-
 
 /* img { display:block; }   */
 

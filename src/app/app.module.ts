@@ -13,6 +13,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon'; 
+import { MatSelectModule } from '@angular/material/select';
 
 import { AppComponent } from './app.component';
 import { ShowPostsComponent } from './show-posts/show-posts.component';
@@ -46,6 +47,7 @@ import { ImageInfoDialogComponent } from './image-info-dialog/image-info-dialog.
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
+    MatSelectModule
   ],
   entryComponents:[ PostInfoDialogComponent, ImageInfoDialogComponent ],
   providers: [],
